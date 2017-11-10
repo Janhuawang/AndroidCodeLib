@@ -1,1 +1,1 @@
-include ':app', ':app', ':macore', ':baselib', ':b'
+include ':app', ':app', ':macore', ':baselib', ':b', ':c'
