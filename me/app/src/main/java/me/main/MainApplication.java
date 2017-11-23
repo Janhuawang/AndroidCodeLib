@@ -3,7 +3,7 @@ package me.main;
 
 import com.spinytech.macore.router.WideRouter;
 
-import baselib.BaseApplication;
+import baselib.base.BaseApplication;
 
 /**
  * Application 注册进程

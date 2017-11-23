@@ -1,11 +1,10 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <!-- 主题 -->
+    <style name="AppTheme" parent="BaseAppTheme"></style>
+    <!-- 导航条 -->
+    <style name="Toolbar" parent="BaseToolbar">
+        <item name="navigationIcon">@drawable/ic_toolbar_back</item>
     </style>
 
 </resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 主题 -->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#2196f3</color>
+    <color name="colorWindowBackground">@color/background_color_ee</color>
+    <color name="colorButtonNormal">@color/background_color_ee</color>
+
+    <!--Toolbar-->
+    <color name="colorToolbarSecondary">@color/text_color_75</color>
+    <color name="colorToolbarPrimary">@color/text_color_21</color>
+    <color name="colorToolbarTextColorPrimary">@color/text_color_21</color>
+
+    <!-- 文本框、单选、多选框的选中、光标颜色值 -->
+    <color name="ripple">#26000000</color>
+    <color name="ripple_bg">#bfffffff</color>
+
+    <!-- 布局背景色 -->
+    <color name="background_color_ee">#eeeeee</color>
+    <color name="background_color_f5">#f5f5f5</color>
+
+    <!-- 文字颜色 -->
+    <color name="text_color_21">#212121</color>
+    <color name="text_color_42">#424242</color>
+    <color name="text_color_61">#616161</color>
+    <color name="text_color_75">#757575</color>
+    <color name="text_color_99">#999999</color>
+    <color name="text_hint">#bdbdbd</color>
+    <color name="text_disable">#cccccc</color>
+
+    <!-- 谷歌官方颜色 -->
+    <color name="blue">#FF33B5E5</color>
+    <color name="purple">#FFAA66CC</color>
+    <color name="green">#FF99CC00</color>
+    <color name="orange">#FFFFBB33</color>
+    <color name="red">#FFFF4444</color>
+    <color name="brown">#FF795548</color>
+    <color name="darkBlue">#FF0099CC</color>
+    <color name="darkPurple">#FF9933CC</color>
+    <color name="darkGreen">#FF669900</color>
+    <color name="darkOrange">#FFFF8800</color>
+    <color name="darkRed">#FFCC0000</color>
+
+    <integer-array name="android_color_array">
+        <item>@color/blue</item>
+        <item>@color/purple</item>
+        <item>@color/green</item>
+        <item>@color/orange</item>
+        <item>@color/red</item>
+        <item>@color/darkBlue</item>
+        <item>@color/darkPurple</item>
+        <item>@color/darkGreen</item>
+        <item>@color/darkOrange</item>
+        <item>@color/darkRed</item>
+    </integer-array>
+
+</resources>
