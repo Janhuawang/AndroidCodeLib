@@ -3,5 +3,7 @@
 
     <item name="appBarLayout" type="id"/>
     <item name="toolbar" type="id"/>
+    <item name="rootLayout" type="id"/>
+    <item name="baseContainer" type="id"/>
 
 </resources>

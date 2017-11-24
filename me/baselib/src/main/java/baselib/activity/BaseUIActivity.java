@@ -1,5 +1,7 @@
 package baselib.activity;
 
+import android.support.v7.app.ActionBar;
+import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -18,13 +20,23 @@ import baselib.view.IProgressBar;
  */
 public abstract class BaseUIActivity extends BaseActivity {
     /**
+     * 导航条：
+     * 1、ActionBar抽象只做管理
+     * 2、Toolbar 实现类
+     */
+    private ActionBar actionBar;
+    private Toolbar toolbar;
+
+    /**
      * 点击空白布局关闭输入法
      */
     private boolean isClickHintKeyboardStatus = true;
+
     /**
      * 返回键回调接口
      */
     private KeyBack keyBack;
+
     /**
      * 缓冲框
      */
@@ -60,6 +72,41 @@ public abstract class BaseUIActivity extends BaseActivity {
 
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    /**
+     * 获取导航条
+     *
+     * @return
+     */
+    public ActionBar getSupportActionBar() {
+        if (actionBar == null) {
+            if (getToolbar() != null) {
+                setSupportActionBar(toolbar);
+            }
+            actionBar = super.getSupportActionBar();
+        }
+        return actionBar;
+    }
+
+    /**
+     * 获取导航View
+     *
+     * @return
+     */
+    public Toolbar getToolbar() {
+        return toolbar = (Toolbar) findViewById(R.id.toolbar);
+    }
+
+    /**
+     * 设置导航条显示状态
+     *
+     * @param isDisplay
+     */
+    public void setToolbarDisplay(boolean isDisplay) {
+        if (getToolbar() != null) {
+            toolbar.setVisibility(isDisplay ? View.VISIBLE : View.GONE);
+        }
     }
 
     /**

@@ -69,7 +69,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
     /**
      * 初始化流程
      */
-    private void init() {
+    protected void init() {
         // 如果页面正在关闭，不调用下面的方法，防止在onIntentEvent中发现传入的参数为null，
         // 调用了finish方法后，执行下面的方法报空指针异常，友盟发现魅族3和虚拟机会有这种情况
         if (baseActivity.isFinishing()) {
