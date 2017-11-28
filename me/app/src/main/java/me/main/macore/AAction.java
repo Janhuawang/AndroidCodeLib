@@ -1,4 +1,4 @@
-package me.main;
+package me.main.macore;
 
 import android.content.Context;
 import android.text.TextUtils;

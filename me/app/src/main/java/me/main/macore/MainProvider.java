@@ -1,4 +1,4 @@
-package me.main;
+package me.main.macore;
 
 import com.spinytech.macore.MaProvider;
 

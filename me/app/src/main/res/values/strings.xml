@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Me</string>
+    <string name="app_name">Demo</string>
+    <string name="activity_title_main">首页</string>
 </resources>

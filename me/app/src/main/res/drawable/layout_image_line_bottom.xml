@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/shape_line_bottom" android:state_pressed="false" />
+
+    <item android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape>
+                    <padding android:bottom="@dimen/public_line_hg_08" />
+                    <solid android:color="@color/public_line_color" />
+                </shape>
+            </item>
+            <item>
+                <shape>
+                    <solid android:color="@color/public_layout_item_color" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

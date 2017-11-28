@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <item name="appBarLayout" type="id"/>
-    <item name="toolbar" type="id"/>
-    <item name="rootLayout" type="id"/>
-    <item name="baseContainer" type="id"/>
+    <!--公共基Id-->
+    <item name="appBarLayout" type="id" />
+    <item name="toolbar" type="id" />
+    <item name="rootLayout" type="id" />
+    <item name="baseContainer" type="id" />
+    <item name="titleView" type="id" />
+
+    <!--轮播图Id-->
+    <item name="widgetBanner" type="id"/>
+    <item name="bannerContainer" type="id"/>
+    <item name="bannerViewPager" type="id"/>
+    <item name="circleIndicator" type="id"/>
+    <item name="numIndicator" type="id"/>
+    <item name="bannerTitle" type="id"/>
+    <item name="numIndicatorInside" type="id"/>
+    <item name="indicatorInside" type="id"/>
+    <item name="bannerDefaultImage" type="id"/>
 
 </resources>

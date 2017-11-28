@@ -24,22 +24,14 @@ public abstract class BaseUINavigateActivity extends BaseUIActivity {
     @Override
     protected void init() {
         LayoutInflater.from(baseActivity).inflate(getViewId(), findViewById(R.id.baseContainer), true);
-        super.init();
-    }
-
-    @Override
-    public void initView() {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-    }
-
-    @Override
-    public void initListener() {
         onKeyBack(new KeyBack() {
             @Override
             public void onBack() {
                 back();
             }
         });
+        super.init();
     }
 
     public abstract int getViewId();

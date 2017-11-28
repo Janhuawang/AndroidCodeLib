@@ -5,7 +5,8 @@ import android.support.annotation.NonNull;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.spinytech.macore.MaApplication;
@@ -14,10 +15,15 @@ import com.spinytech.macore.router.RouterRequest;
 import com.spinytech.macore.router.RouterResponse;
 
 import baselib.activity.BaseUINavigateActivity;
+import me.main.adapter.SampleAdapter;
+import me.main.demo.banner.BannerActivity;
 
-public class MainActivity extends BaseUINavigateActivity implements View.OnClickListener {
+/**
+ * 主页面
+ */
+public class MainActivity extends BaseUINavigateActivity implements AdapterView.OnItemClickListener {
 
-    private Button bt_one, bt_two, bt_three, bt_four, bt_five, bt_six;
+    private ListView listView;
 
     @Override
     public int getViewId() {
@@ -40,15 +46,9 @@ public class MainActivity extends BaseUINavigateActivity implements View.OnClick
 
     @Override
     public void initView() {
-        super.initView();
-        bt_one = findViewById(R.id.bt_one);
-        bt_two = findViewById(R.id.bt_two);
-        bt_three = findViewById(R.id.bt_three);
-        bt_four = findViewById(R.id.bt_four);
-        bt_five = findViewById(R.id.bt_five);
-        bt_six = findViewById(R.id.bt_six);
+        setToolbarTile(getString(R.string.activity_title_main));
 
-        setToolbarTile("啦啦啦");
+        listView = findViewById(R.id.list);
     }
 
     @Override
@@ -57,17 +57,13 @@ public class MainActivity extends BaseUINavigateActivity implements View.OnClick
 
     @Override
     public void initListener() {
-        super.initListener();
-        bt_one.setOnClickListener(this);
-        bt_two.setOnClickListener(this);
-        bt_three.setOnClickListener(this);
-        bt_four.setOnClickListener(this);
-        bt_five.setOnClickListener(this);
-        bt_six.setOnClickListener(this);
+        listView.setOnItemClickListener(this);
     }
 
     @Override
     public void initData() {
+        String[] data = getResources().getStringArray(R.array.demo_list);
+        listView.setAdapter(new SampleAdapter(this, data));
     }
 
     @Override
@@ -75,9 +71,9 @@ public class MainActivity extends BaseUINavigateActivity implements View.OnClick
     }
 
     @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.bt_one:
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+        switch (position) {
+            case 0:
                 try {
                     RouterResponse response = LocalRouter.getInstance(MaApplication.getMaApplication())
                             .route(MainActivity.this, RouterRequest.obtain(MainActivity.this)
@@ -92,19 +88,8 @@ public class MainActivity extends BaseUINavigateActivity implements View.OnClick
                 }
                 break;
 
-            case R.id.bt_two:
-                break;
-
-            case R.id.bt_three:
-                break;
-
-            case R.id.bt_four:
-                break;
-
-            case R.id.bt_five:
-                break;
-
-            case R.id.bt_six:
+            case 1:
+                startActivity(new Intent(this, BannerActivity.class));
                 break;
         }
     }

@@ -4,65 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ScrollView
+    <ListView
+        android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <EditText
-                android:id="@+id/et_one"
-                android:layout_width="match_parent"
-                android:layout_height="148dp"
-                android:layout_marginTop="10dp"
-                android:text="one" />
-
-            <Button
-                android:id="@+id/bt_one"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="10dp"
-                android:text="one" />
-
-            <Button
-                android:id="@+id/bt_two"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="10dp"
-                android:text="two" />
-
-            <Button
-                android:id="@+id/bt_three"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="10dp"
-                android:text="three" />
-
-            <Button
-                android:id="@+id/bt_four"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="10dp"
-                android:text="four" />
-
-            <Button
-                android:id="@+id/bt_five"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="10dp"
-                android:text="five" />
-
-            <Button
-                android:id="@+id/bt_six"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="10dp"
-                android:text="six" />
-
-        </LinearLayout>
-    </ScrollView>
+        android:layout_height="match_parent"
+        android:divider="@null"/>
 
 </LinearLayout>

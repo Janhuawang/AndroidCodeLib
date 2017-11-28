@@ -30,6 +30,15 @@
     <color name="text_hint">#bdbdbd</color>
     <color name="text_disable">#cccccc</color>
 
+    <!-- 白色 -->
+    <color name="white">#FFFFFF</color>
+    <!-- 黑色 -->
+    <color name="black">#000000</color>
+    <!-- 灰色 -->
+    <color name="grey">#C1C1C1</color>
+    <!-- 透明色 -->
+    <color name="transparent">#00000000</color>
+
     <!-- 谷歌官方颜色 -->
     <color name="blue">#FF33B5E5</color>
     <color name="purple">#FFAA66CC</color>
