@@ -44,6 +44,7 @@
     <array name="demo_list">
         <item>模块化路由</item>
         <item>轮播图</item>
+        <item>RecycleView</item>
     </array>
 
     <array name="anim">

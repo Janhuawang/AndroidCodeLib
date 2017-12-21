@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="adapter_header_height_normal">48dp</dimen>
+    <dimen name="adapter_footer_height_normal">48dp</dimen>
+
+    <dimen name="spacing_huge">40dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_normal">16dp</dimen>
+    <dimen name="spacing_small">10dp</dimen>
+
+    <!-- 新的字体大小规范，好像不怎么规范 -->
+    <dimen name="font_size23">23dp</dimen>
+    <dimen name="font_size19">19dp</dimen>
+    <dimen name="font_size18">18dp</dimen>
+    <dimen name="font_size17">17dp</dimen>
+    <dimen name="font_size16">16dp</dimen>
+    <dimen name="font_size15">15dp</dimen>
+    <dimen name="font_size14">14dp</dimen>
+    <dimen name="font_size13">13dp</dimen>
+    <dimen name="font_size12">12dp</dimen>
+    <dimen name="font_size10">10dp</dimen>
+
+</resources>

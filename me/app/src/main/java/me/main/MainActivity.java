@@ -17,6 +17,7 @@ import com.spinytech.macore.router.RouterResponse;
 import baselib.activity.BaseUINavigateActivity;
 import me.main.adapter.SampleAdapter;
 import me.main.demo.banner.BannerActivity;
+import me.main.demo.recycle.RecycleTestActivity;
 
 /**
  * 主页面
@@ -91,6 +92,11 @@ public class MainActivity extends BaseUINavigateActivity implements AdapterView.
             case 1:
                 startActivity(new Intent(this, BannerActivity.class));
                 break;
+
+            case 2:
+                startActivity(new Intent(this, RecycleTestActivity.class));
+                break;
+
         }
     }
 }

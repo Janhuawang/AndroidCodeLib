@@ -25,6 +25,11 @@
             android:name=".demo.banner.BannerActivity"
             android:screenOrientation="portrait" />
 
+        <!--列表加载-->
+        <activity
+            android:name=".demo.recycle.RecycleTestActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>
