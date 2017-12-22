@@ -1,4 +1,4 @@
-package baselib.Adapter.holder;
+package baselib.adapter.holder;
 
 import android.view.ViewGroup;
 

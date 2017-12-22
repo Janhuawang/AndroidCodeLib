@@ -1,4 +1,4 @@
-package baselib.Adapter;
+package baselib.adapter;
 
 import android.support.annotation.IdRes;
 import android.support.v7.widget.RecyclerView;

@@ -1,9 +1,9 @@
-package baselib.Adapter.holder;
+package baselib.adapter.holder;
 
 import android.view.View;
 import android.view.ViewGroup;
 
-import baselib.Adapter.BaseViewHolder;
+import baselib.adapter.BaseViewHolder;
 
 /**
  * 多状态变化基类

@@ -1,4 +1,4 @@
-package baselib.Adapter;
+package baselib.adapter;
 
 import android.content.Context;
 import android.os.Handler;
@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import baselib.Adapter.holder.BaseStateViewHolder;
-import baselib.Adapter.holder.FooterViewHolder;
-import baselib.Adapter.holder.HeaderViewHolder;
+import baselib.adapter.holder.BaseStateViewHolder;
+import baselib.adapter.holder.FooterViewHolder;
+import baselib.adapter.holder.HeaderViewHolder;
 
 /**
  * 适配器基类

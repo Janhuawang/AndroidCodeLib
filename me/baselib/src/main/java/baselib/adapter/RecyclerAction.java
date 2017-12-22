@@ -1,4 +1,4 @@
-package baselib.Adapter;
+package baselib.adapter;
 
 /**
  * 头部、底部加载的回调
