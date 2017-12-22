@@ -19,10 +19,6 @@ public class RecycleTestAdapter extends RecyclerAdapter<Consumption> {
         super(context, data);
     }
 
-    public RecycleTestAdapter(Context context, Consumption[] data) {
-        super(context, data);
-    }
-
     @Override
     public BaseViewHolder onCreateBaseViewHolder(ViewGroup parent, int viewType) {
         return new TestItemHolder(parent);

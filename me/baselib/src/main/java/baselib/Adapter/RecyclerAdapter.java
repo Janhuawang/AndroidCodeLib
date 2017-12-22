@@ -1,6 +1,7 @@
 package baselib.Adapter;
 
 import android.content.Context;
+import android.os.Handler;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
@@ -28,7 +29,6 @@ public abstract class RecyclerAdapter<T> extends RecyclerView.Adapter<BaseViewHo
     private BaseStateViewHolder headerView;
     private int loadSize = 10;// 每页加载的数据，默认10条
     private boolean hasHeader;
-    private boolean hasFooter;
     private RecyclerAction mLoadMoreAction;
 
     public RecyclerAdapter(Context context, List<T> data) {
@@ -36,34 +36,43 @@ public abstract class RecyclerAdapter<T> extends RecyclerView.Adapter<BaseViewHo
         setData(data);
     }
 
-    public RecyclerAdapter(Context context, T[] data) {
-        this(context, Arrays.asList(data));
-    }
-
     public void setData(T[] data) {
-        setData(Arrays.asList(data));
+        setData(new ArrayList(Arrays.asList(data)));
     }
 
     public void addData(T[] data) {
-        addData(Arrays.asList(data));
+        addData(new ArrayList(Arrays.asList(data)));
     }
 
+    /**
+     * 设置
+     *
+     * @param data
+     */
     public void setData(List<T> data) {
         if (data == null) {
             data = new ArrayList<>();
         }
-
-        this.mData = data;
-        if (hasFooter) {
-            if (this.mData.size() < loadSize) {
+        if (mLoadMoreAction != null) {
+            int size = data.size();
+            if (size == 0) {
                 setFooterState(BaseStateViewHolder.FOOTER_HIDE);
+            } else if (size < loadSize) {
+                setFooterState(BaseStateViewHolder.FOOTER_NO_MORE);
             } else {
                 setFooterState(BaseStateViewHolder.FOOTER_NORMAL);
             }
         }
+
+        this.mData = data;
         this.notifyDataSetChanged();
     }
 
+    /**
+     * 增加
+     *
+     * @param data
+     */
     public void addData(List<T> data) {
         if (data == null || data.isEmpty()) {// 无更多数据
             setFooterState(BaseStateViewHolder.FOOTER_NO_MORE);
@@ -78,13 +87,18 @@ public abstract class RecyclerAdapter<T> extends RecyclerView.Adapter<BaseViewHo
             setFooterState(BaseStateViewHolder.FOOTER_NORMAL);
         }
 
-        notifyItemRangeInserted(positionStart, data.size());
+        new Handler().post(new Runnable() {
+            @Override
+            public void run() {
+                notifyItemRangeInserted(positionStart, data.size());
+            }
+        });
     }
 
     public abstract BaseViewHolder<T> onCreateBaseViewHolder(ViewGroup parent, int viewType);
 
     @Override
-    public BaseViewHolder<T> onCreateViewHolder(ViewGroup parent, int viewType) {
+    public final BaseViewHolder<T> onCreateViewHolder(ViewGroup parent, int viewType) {
         if (viewType == HEADER_TYPE) {
             return headerView = getHeaderView(parent);
         } else if (viewType == FOOTER_TYPE) {
@@ -116,7 +130,7 @@ public abstract class RecyclerAdapter<T> extends RecyclerView.Adapter<BaseViewHo
     @Override
     public final int getItemCount() {
         int headerCount = hasHeader ? 1 : 0;
-        int footerCount = hasFooter ? 1 : 0;
+        int footerCount = mLoadMoreAction != null ? 1 : 0;
         final int size = getCount();
         return size > 0 ? size + headerCount + footerCount : headerCount;
     }
@@ -130,7 +144,7 @@ public abstract class RecyclerAdapter<T> extends RecyclerView.Adapter<BaseViewHo
         if (hasHeader && position == 0) {
             return HEADER_TYPE;
         }
-        if (hasFooter && position == getItemCount() - 1) {
+        if (mLoadMoreAction != null && position == getItemCount() - 1) {
             return FOOTER_TYPE;
         }
         return super.getItemViewType(position);
@@ -140,24 +154,40 @@ public abstract class RecyclerAdapter<T> extends RecyclerView.Adapter<BaseViewHo
         return footerView != null && footerView.isLoad();
     }
 
+    /**
+     * 底部状态
+     *
+     * @param state
+     */
     private void setFooterState(int state) {
         if (footerView != null) {
             footerView.setState(state);
         }
     }
 
+    /**
+     * 底部加载回调
+     *
+     * @param action
+     */
     public void setLoadMoreAction(RecyclerAction action) {
         mLoadMoreAction = action;
     }
 
+    /**
+     * 头部显示状态
+     *
+     * @param hasHeader
+     */
     public void setHasHeader(boolean hasHeader) {
         this.hasHeader = hasHeader;
     }
 
-    public void setHasFooter(boolean hasFooter) {
-        this.hasFooter = hasFooter;
-    }
-
+    /**
+     * 每页加载条数
+     *
+     * @param loadSize
+     */
     protected void setLoadSize(int loadSize) {
         this.loadSize = loadSize;
     }

@@ -5,6 +5,7 @@ import android.view.ViewGroup;
 import baselib.R;
 
 /**
+ * 头部
  * 作者：wjh on 2017/12/21 16:39
  */
 public class HeaderViewHolder extends BaseStateViewHolder {
@@ -19,11 +20,9 @@ public class HeaderViewHolder extends BaseStateViewHolder {
 
     @Override
     public void fillData() {
-
     }
 
     @Override
     public void setState(int state) {
-
     }
 }

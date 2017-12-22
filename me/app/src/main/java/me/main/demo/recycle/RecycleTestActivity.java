@@ -1,6 +1,7 @@
 package me.main.demo.recycle;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -38,17 +39,22 @@ public class RecycleTestActivity extends BaseUINavigateActivity {
     @Override
     public void initData() {
         recycler_view.setLayoutManager(new LinearLayoutManager(this));
-        recycleTestAdapter = new RecycleTestAdapter(this, getRecordVirtualData());
-        recycleTestAdapter.setHasFooter(true);
+        recycleTestAdapter = new RecycleTestAdapter(this, null);
         recycleTestAdapter.setLoadMoreAction(new RecyclerAction() {
             @Override
             public void onAction() {
-                //recycleTestAdapter.addData(getRecordVirtualData());
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        recycleTestAdapter.addData(getRecordVirtualData());
+                    }
+                }, 5000);
+
             }
         });
 
         recycler_view.setAdapter(recycleTestAdapter);
-
+        recycleTestAdapter.setData(getRecordVirtualData());
     }
 
     @Override
@@ -68,7 +74,6 @@ public class RecycleTestActivity extends BaseUINavigateActivity {
 
     @Override
     public void onCreateMenu(Menu menu) {
-
     }
 
     @Override
@@ -78,6 +83,11 @@ public class RecycleTestActivity extends BaseUINavigateActivity {
 
     public Consumption[] getRecordVirtualData() {
         return new Consumption[]{
+                new Consumption("Demo", "2015-12-18 12:09", "消费", 9.7f, 24.19f, "兴业源三楼"),
+                new Consumption("Demo", "2015-12-18 12:09", "消费", 9.7f, 24.19f, "兴业源三楼"),
+                new Consumption("Demo", "2015-12-18 12:09", "消费", 9.7f, 24.19f, "兴业源三楼"),
+                new Consumption("Demo", "2015-12-18 12:09", "消费", 9.7f, 24.19f, "兴业源三楼"),
+                new Consumption("Demo", "2015-12-18 12:09", "消费", 9.7f, 24.19f, "兴业源三楼"),
                 new Consumption("Demo", "2015-12-18 12:09", "消费", 9.7f, 24.19f, "兴业源三楼"),
                 new Consumption("Demo", "2015-12-18 12:09", "消费", 9.7f, 24.19f, "兴业源三楼"),
                 new Consumption("Demo", "2015-12-18 12:09", "消费", 9.7f, 24.19f, "兴业源三楼"),

@@ -38,7 +38,7 @@ public abstract class BaseApplication extends MaApplication implements Thread.Un
     public void onCreate() {
         super.onCreate();
         baseApplication = this;
-        Thread.setDefaultUncaughtExceptionHandler(this);// 设置Thread Exception Handler
+        //Thread.setDefaultUncaughtExceptionHandler(this);// 设置Thread Exception Handler
     }
 
     @Override

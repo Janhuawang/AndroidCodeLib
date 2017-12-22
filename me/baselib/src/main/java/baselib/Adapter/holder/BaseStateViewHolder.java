@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import baselib.Adapter.BaseViewHolder;
 
 /**
+ * 多状态变化基类
  * 作者：wjh on 2017/12/21 16:39
  */
 public abstract class BaseStateViewHolder extends BaseViewHolder {
@@ -13,9 +14,8 @@ public abstract class BaseStateViewHolder extends BaseViewHolder {
     public static final int FOOTER_LOADING = 1;
     public static final int FOOTER_NO_MORE = 2;
     public static final int FOOTER_HIDE = 3;
-    public static final int FOOTER_SPACE = 4;
 
-    private int state;
+    private int state = FOOTER_NORMAL;
 
     public BaseStateViewHolder(View itemView) {
         super(itemView);

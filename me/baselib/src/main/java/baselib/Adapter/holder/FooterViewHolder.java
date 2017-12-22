@@ -8,6 +8,7 @@ import android.widget.TextView;
 import baselib.R;
 
 /**
+ * 底部
  * 作者：wjh on 2017/12/21 16:39
  */
 public class FooterViewHolder extends BaseStateViewHolder {
@@ -21,7 +22,7 @@ public class FooterViewHolder extends BaseStateViewHolder {
 
     @Override
     protected void onInitializeView() {
-       // progress_bar = (ProgressBar) findViewById(R.id.progress_bar);
+        progress_bar = (ProgressBar) findViewById(R.id.progress_bar);
         tv_foot = (TextView) findViewById(R.id.tv_foot);
     }
 
@@ -31,21 +32,30 @@ public class FooterViewHolder extends BaseStateViewHolder {
 
     @Override
     public void setState(int state) {
+        super.setState(state);
         switch (state) {
+            case FOOTER_HIDE:
+                itemView.setVisibility(View.GONE);
+                break;
+
             case FOOTER_NORMAL:
-              //  progress_bar.setVisibility(View.GONE);
-                tv_foot.setText("正常");
+                itemView.setVisibility(View.VISIBLE);
+                progress_bar.setVisibility(View.GONE);
+                tv_foot.setText(R.string.footer_normal_public);
                 break;
 
             case FOOTER_LOADING:
-               // progress_bar.setVisibility(View.VISIBLE);
-                tv_foot.setText("正在加载中~");
+                itemView.setVisibility(View.VISIBLE);
+                progress_bar.setVisibility(View.VISIBLE);
+                tv_foot.setText(R.string.footer_loading_public);
                 break;
 
             case FOOTER_NO_MORE:
-              //  progress_bar.setVisibility(View.GONE);
-                tv_foot.setText("无数据了");
+                itemView.setVisibility(View.VISIBLE);
+                progress_bar.setVisibility(View.GONE);
+                tv_foot.setText(R.string.footer_empty_public);
                 break;
         }
     }
+
 }

@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="app_name">BaseLib</string>
+
+    <!-- 极限情况 -->
+    <string name="public.hint.empty">暂无数据</string>
+    <string name="public.hint.load.error">加载错误</string>
+    <string name="footer.normal.public">点击加载更多</string>
+    <string name="footer.loading.public">正在加载&#8230;</string>
+    <string name="footer.empty.public">全部加载完毕</string>
+
+</resources>

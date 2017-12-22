@@ -9,17 +9,24 @@
         android:gravity="center_horizontal"
         android:padding="@dimen/spacing_normal">
 
-        <!--<ProgressBar-->
-            <!--android:id="@+id/progress_bar"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content" />-->
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/spacing_small"
+            android:layout_marginRight="@dimen/spacing_small"
+            android:layout_toLeftOf="@+id/tv_foot"
+            android:layout_toStartOf="@+id/tv_foot"
+            android:visibility="gone"
+            />
 
         <TextView
             android:id="@+id/tv_foot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:text="@string/footer.normal.public"
             android:textColor="@color/text_color_75"
             android:textSize="@dimen/font_size14" />
 

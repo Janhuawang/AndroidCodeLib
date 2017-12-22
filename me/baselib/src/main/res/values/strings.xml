@@ -1,6 +1,12 @@
 <resources>
 
     <string name="app_name">BaseLib</string>
-    <string name="footer.normal.public">点击加载更多</string>
+
+    <!-- 极限情况 -->
+    <string name="public.hint.empty">Empty</string>
+    <string name="public.hint.load.error">Load Error</string>
+    <string name="footer.normal.public">Tap to load more</string>
+    <string name="footer.loading.public">Loading&#8230;</string>
+    <string name="footer.empty.public">All your data are here</string>
 
 </resources>
