@@ -4,6 +4,7 @@ package me.main.base;
 import android.content.Context;
 import android.util.DisplayMetrics;
 
+import com.google.firebase.FirebaseApp;
 import com.spinytech.macore.router.WideRouter;
 
 import baselib.base.BaseApplication;
@@ -24,6 +25,8 @@ public class App extends BaseApplication {
         super.onCreate();
         LoadResource.init(this);
         getScreen(this);
+
+        FirebaseApp.initializeApp(this); // TODO: 2018/6/6 人脸识别
     }
 
     public void getScreen(Context aty) {

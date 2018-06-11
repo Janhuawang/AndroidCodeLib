@@ -5,8 +5,8 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
-import baselib.Adapter.BaseViewHolder;
-import baselib.Adapter.RecyclerAdapter;
+import baselib.adapter.BaseViewHolder;
+import baselib.adapter.RecyclerAdapter;
 
 /**
  * 作者：wjh on 2017/12/21 20:22

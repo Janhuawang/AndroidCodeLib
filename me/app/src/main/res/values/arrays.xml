@@ -45,6 +45,7 @@
         <item>模块化路由</item>
         <item>轮播图</item>
         <item>RecycleView</item>
+        <item>FireBase面部识别</item>
     </array>
 
     <array name="anim">

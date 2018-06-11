@@ -3,7 +3,7 @@ package me.main.demo.recycle;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import baselib.Adapter.BaseViewHolder;
+import baselib.adapter.BaseViewHolder;
 import me.main.R;
 
 /**

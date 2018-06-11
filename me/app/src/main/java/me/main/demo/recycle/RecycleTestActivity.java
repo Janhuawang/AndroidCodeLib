@@ -8,8 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import baselib.Adapter.RecyclerAction;
 import baselib.activity.BaseUINavigateActivity;
+import baselib.adapter.RecyclerAction;
 import me.main.R;
 
 /**

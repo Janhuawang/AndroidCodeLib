@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "311679539764",
+    "firebase_url": "https://umusogo.firebaseio.com",
+    "project_id": "umusogo",
+    "storage_bucket": "umusogo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:311679539764:android:3fc6ccb7cced1952",
+        "android_client_info": {
+          "package_name": "com.my"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "311679539764-i73o6gtj961p7ijvt3ojstakpctvgnhp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.my",
+            "certificate_hash": "773bc291b3067297e676b08a44c4ccbe3db4e353"
+          }
+        },
+        {
+          "client_id": "311679539764-oq4kir4o0blilr5fg067v6cp758o43io.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "311679539764-oq4kir4o0blilr5fg067v6cp758o43io.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrQoFjvD22auEQg6xlVWChFErczsLjN78"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "311679539764-oq4kir4o0blilr5fg067v6cp758o43io.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -17,6 +17,7 @@ import com.spinytech.macore.router.RouterResponse;
 import baselib.activity.BaseUINavigateActivity;
 import me.main.adapter.SampleAdapter;
 import me.main.demo.banner.BannerActivity;
+import me.main.demo.firebase.FaceDetectorActivity;
 import me.main.demo.recycle.RecycleTestActivity;
 
 /**
@@ -95,6 +96,10 @@ public class MainActivity extends BaseUINavigateActivity implements AdapterView.
 
             case 2:
                 startActivity(new Intent(this, RecycleTestActivity.class));
+                break;
+
+            case 3:
+                startActivity(new Intent(this, FaceDetectorActivity.class));
                 break;
 
         }
